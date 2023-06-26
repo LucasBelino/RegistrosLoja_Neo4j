@@ -1,25 +1,18 @@
-from funcionario import Funcionario
+from usuario import Usuario
 
-class Gerente(Funcionario):
-    def __init__(self, nome, cpf, email, salario, departamento):
-        super().__init__(nome, cpf, email, salario)
-        self.departamento = departamento
-        self.logado = False
+class Gerente(Usuario):
+    def __init__(self, cnpj):
+        self.cnpj = cnpj
+        self.logado = False  # Atributo para indicar se o gerente está logado
 
-    def login(self):
-        self.logado = True
+    def login(self, senha):
+        # Verifica se a senha está correta
+        if senha == "SYSTEM23!":
+            self.logado = True
+            print("Login realizado com sucesso!")
+        else:
+            self.logado = False
+            print("Login inválido. Tente novamente.")
 
     def estaLogado(self):
         return self.logado
-
-    def registrarColaborador(self, crud):
-
-
-    def deletarColaborador(self, crud):
-
-
-    def registrarCompra(self, crud):
-
-
-    def deletarCompra(self, crud):
-
