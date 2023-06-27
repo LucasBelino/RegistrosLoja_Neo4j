@@ -1,6 +1,7 @@
 from usuario import Usuario
 
 class Funcionario(Usuario):
-    def __init__(self, nome, cpf, email, salario):
-        super().__init__(nome, cpf, email)
+    def __init__(self, cpf, email, salario=None):
+        super().__init__(cpf)
+        self.email = email
         self.salario = salario

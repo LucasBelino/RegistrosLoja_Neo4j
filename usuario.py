@@ -1,5 +1,3 @@
 class Usuario:
-    def __init__(self, nome, cpf, email):
-        self.nome = nome
+    def __init__(self, cpf):
         self.cpf = cpf
-        self.email = email
